@@ -4,7 +4,7 @@ import {
   Trash2, BarChart3, Link, TrendingUp, Search, Compass 
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
 
 export default function Dashboard({ user, refreshTrigger, setView }) {
   const [urls, setUrls] = useState([]);

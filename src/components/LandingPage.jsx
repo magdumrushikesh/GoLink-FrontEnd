@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link2, Copy, Check, QrCode, ExternalLink, Calendar, History, Sparkles } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
 
 export default function LandingPage({ user, onLinkShortened }) {
   const [originalUrl, setOriginalUrl] = useState('');
